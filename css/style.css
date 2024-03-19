@@ -1,0 +1,601 @@
+@font-face {
+  font-family: josefin sans;
+  src: url("../fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --linkColor: orange;
+  --linkStyle: none;
+  --font: josefin sans;
+  --linkSize: 2rem;
+  --fontDarkColor: rgb(52, 29, 1);
+
+  --linkSizeTablet: 2.5rem;
+  --h2SizeTablet: 2.5rem;
+
+  --linkSizeDesktop: 2rem;
+  --h2SizeDesktop: 3rem;
+}
+
+body {
+  background-color: rgb(200, 193, 175);
+  margin: 0;
+}
+
+p {
+  font-family: var(--font);
+  line-height: 1.5rem;
+  letter-spacing: 0.03rem;
+}
+
+h2 {
+  font-family: var(--font);
+  color: var(--fontDarkColor);
+}
+
+h3 {
+  font-family: var(--font);
+  color: var(--fontDarkColor);
+  font-size: 1.4rem;
+}
+
+a {
+  font-family: var(--font);
+  text-decoration: var(--linkStyle);
+}
+
+main {
+  margin: 3rem;
+}
+
+img {
+  border-radius: 20px;
+  width: 100%;
+}
+
+/* Header  */
+
+#navbar {
+  position: absolute;
+}
+
+header {
+  margin: 2vh 5vw 1vh 1vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+header > div > p {
+  font-size: 3rem;
+  margin: 0;
+  padding: 1rem;
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+}
+
+nav > ul {
+  font-family: var(--font);
+}
+
+nav > ul > li {
+  list-style-type: none;
+  margin-bottom: 2vh;
+  letter-spacing: 0.04rem;
+}
+
+nav > ul > li > a {
+  color: var(--linkColor);
+  text-decoration: var(--linkStyle);
+}
+
+/* Hero */
+
+#heroContainer {
+  /* height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  background-size: cover;
+  background-image: url("../images/JugOnDisplayMobile.jpg");
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+#heroTextBox {
+  position: relative;
+  margin-top: 40%;
+  margin-bottom: 50%;
+}
+
+#heroHeader {
+  color: rgb(229, 226, 214);
+  font-family: var(--font);
+  font-size: 1.1rem;
+}
+
+#heroSubHeader {
+  font-size: 1rem;
+}
+
+#heroContact {
+  color: var(--linkColor);
+  text-decoration: var(--linkStyle);
+  font-family: var(--font);
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+/* Main */
+
+/* #pitchTexts */
+
+#pitchTexts {
+  display: flex;
+  flex-direction: column;
+}
+
+#pitchTexts > article {
+  padding: 1rem;
+  text-align: center;
+}
+
+/* #skills */
+
+#skills {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding-top: 2rem;
+}
+
+#skills > article {
+  padding-bottom: 2rem;
+}
+
+/* Blog */
+
+#blog h2 {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+#blog h3 {
+  color: var(--fontDarkColor);
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+#blog > article {
+  padding-top: 2rem;
+}
+
+#blog p {
+  font-size: 1.1rem;
+}
+
+.blogReadMore {
+  color: rgb(186, 103, 2);
+  font-size: 1.1rem;
+}
+
+#blogArticles-And-Aside {
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+#blogArticles-And-Aside > div {
+  justify-content: space-between;
+}
+
+#blogArticlesBox {
+  margin-bottom: 3.5rem;
+}
+
+/* Aside */
+
+aside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
+  border: 1px solid black;
+  margin-left: 4rem;
+}
+
+aside > h4 {
+  color: var(--fontDarkColor);
+  font-family: var(--font);
+}
+
+aside > ul {
+  align-content: center;
+  padding: 0;
+}
+
+aside > ul > li {
+  list-style-type: none;
+  font-size: 1.1rem;
+  font-family: var(--font);
+  margin-bottom: 1.5rem;
+}
+
+/* Form */
+
+#contactForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+#contactForm > form input {
+  margin-bottom: 1rem;
+}
+
+#userMessage {
+  width: 100%;
+}
+
+#buttonStyle {
+  align-items: center;
+  margin: auto;
+  background-color: darkorange;
+  color: white;
+  padding: 15px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* footer */
+
+footer {
+  margin: 4rem 2rem 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer > div {
+  padding: 0.3rem;
+  font-family: var(--font);
+}
+
+/* Media queries */
+
+/* Mobile */
+
+@media screen and (max-width: 767px) {
+  aside {
+    display: none;
+  }
+}
+
+/* Tablet */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  header > div > p {
+    font-size: 4.5rem;
+    padding: 2rem;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+  }
+
+  #heroContainer {
+    display: flex;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    background-image: url("../images/JugOnDisplayTablet.jpg");
+  }
+
+  #heroTextBox {
+    position: relative;
+    margin-bottom: 21rem;
+    width: 80%;
+  }
+
+  #heroHeader {
+    font-size: 1.7rem;
+  }
+
+  #heroSubHeader {
+    font-size: 1.4rem;
+  }
+
+  #heroContact {
+    font-size: 1.6rem;
+  }
+
+  header > div > nav {
+    padding-right: 4rem;
+    padding-left: 12rem;
+  }
+
+  nav > ul {
+    display: flex;
+    flex-direction: row;
+    font-size: 1.5rem;
+    justify-content: space-between;
+    width: 40vw;
+  }
+
+  nav > ul > li {
+    padding-right: 3rem;
+  }
+
+  #pitchTexts > article > h2 {
+    font-size: var(--h2SizeTablet);
+  }
+
+  #skills > article {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+  }
+
+  #skills > article:nth-child(even) {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+  }
+
+  .reverse {
+    order: -1;
+  }
+
+  #blogArticles-And-Aside {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+
+  aside > ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  aside > ul > li > a {
+    color: rgb(186, 103, 2);
+  }
+
+  #userMessage {
+    width: 550px;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+/* Desktop */
+
+@media screen and (min-width: 1025px) and (max-width: 1300px) {
+  body {
+    margin: 0 10% 0 10%;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  header > div > p {
+    font-size: 5.5rem;
+    padding: 2rem;
+  }
+
+  #heroContainer {
+    height: 100vh;
+    background-image: url("../images/JugOnDisplayTablet.jpg");
+  }
+
+  #heroTextBox {
+    position: relative;
+    margin-top: 30%;
+    width: 80%;
+  }
+
+  #heroHeader {
+    font-size: 2.5rem;
+  }
+
+  #heroSubHeader {
+    font-size: 1.9rem;
+  }
+
+  #heroContact {
+    font-size: 2.1rem;
+  }
+
+  nav > ul {
+    display: flex;
+    flex-direction: row;
+    font-size: 1.5rem;
+    justify-content: end;
+    width: 60vw;
+  }
+  nav > ul > li {
+    padding-right: 50px;
+  }
+
+  #pitchTexts {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  #pitchTexts > article {
+    width: 30%;
+  }
+
+  #pitchTexts > article > h2 {
+    font-size: var(--h2SizeTablet);
+  }
+
+  #skills > article {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+  }
+
+  #skills > article:nth-child(even) {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+  }
+
+  .reverse {
+    order: -1;
+  }
+
+  #blogArticles-And-Aside {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+
+  #blogArticlesBox {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  aside > ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  aside > ul > li > a {
+    color: rgb(186, 103, 2);
+  }
+
+  #userMessage {
+    width: 600px;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+/* Large Desktop */
+
+@media screen and (min-width: 1301px) {
+  body {
+    margin: 0 10% 0 10%;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  header > div > p {
+    font-size: 6rem;
+    padding: 3rem;
+  }
+
+  nav > ul > li {
+    padding-right: 50px;
+  }
+
+  #heroContainer {
+    height: 100vh;
+    background-image: url("../images/JugOnDisplayTablet.jpg");
+  }
+
+  #heroTextBox {
+    position: relative;
+    margin-top: 36%;
+    width: 80%;
+  }
+
+  #heroHeader {
+    font-size: 3rem;
+  }
+
+  #heroSubHeader {
+    font-size: 2rem;
+  }
+
+  #heroContact {
+    font-size: 2.5rem;
+  }
+
+  nav > ul {
+    display: flex;
+    flex-direction: row;
+    font-size: 2rem;
+    justify-content: end;
+    width: 60vw;
+  }
+
+  #pitchTexts {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  #pitchTexts > article {
+    width: 30%;
+  }
+
+  #pitchTexts > article > h2 {
+    font-size: var(--h2SizeTablet);
+  }
+
+  #skills > article {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+  }
+
+  #skills > article:nth-child(even) {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+  }
+
+  .reverse {
+    order: -1;
+  }
+
+  #blogArticles-And-Aside {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+
+  #blogArticlesBox {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+  }
+
+  aside > ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  aside > ul > li > a {
+    color: rgb(186, 103, 2);
+  }
+
+  #userMessage {
+    width: 850px;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
